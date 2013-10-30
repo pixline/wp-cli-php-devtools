@@ -1,0 +1,36 @@
+{
+  "name": "pixline/wp-cli-task-command",
+  "type": "command",
+  "description": "Grunt.js partial replacement command(s)",
+  "keywords": ["wp-cli","grunt","task","development"],
+  "homepage": "https://bitbucket.org/pixline/wp-cli-task-command",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Paolo Tresso",
+      "email": "plugins@swergroup.com",
+      "homepage": "http://swergroup.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "wp-cli/wp-cli": ">=0.12",
+    "psy/psysh": "dev-master",
+    "phpunit/phpunit": "3.7.*",
+    "symfony/event-dispatcher": "dev-master",
+    "phpunit/php-invoker": ">=1.1.0",
+    "scrutinizer/scrutinizer": "dev-master",
+    "scrutinizer/utils": "dev-master",
+    "jms/serializer": "0.14.*@dev",
+    "jms/php-manipulator": "dev-master",
+    "nikic/php-parser": "0.9.*@dev"
+  },
+  "support": {
+    "issues": "https://bitbucket.org/pixline/wp-cli-task-command/issues?status=new&status=open",
+    "source": "https://bitbucket.org/pixline/wp-cli-task-command/src"
+  },
+  "autoload": {
+    "files": [ "wp-cli-task-command.php" ]
+  }
+}
