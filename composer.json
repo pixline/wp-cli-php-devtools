@@ -18,14 +18,18 @@
     "wp-cli/wp-cli": ">=0.12",
     "psy/psysh": "dev-master",
     "phpunit/phpunit": "3.7.*",
-    "symfony/event-dispatcher": "dev-master",
-    "phpunit/php-invoker": ">=1.1.0",
+    "phpunit/phpcov": "2.0.*@dev",
     "scrutinizer/scrutinizer": "dev-master",
     "scrutinizer/utils": "dev-master",
     "jms/serializer": "0.14.*@dev",
     "jms/php-manipulator": "dev-master",
-    "nikic/php-parser": "0.9.*@dev"
+    "nikic/php-parser": "0.9.*@dev",
+    "natxet/CssMin": "dev-master"
   },
+  "bin": [
+    "vendor/bin/phpunit",
+    "vendor/bin/scrutinizer"
+  ],
   "support": {
     "issues": "https://bitbucket.org/pixline/wp-cli-task-command/issues?status=new&status=open",
     "source": "https://bitbucket.org/pixline/wp-cli-task-command/src"
