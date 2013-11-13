@@ -1,8 +1,8 @@
 <?php
 /**
- * Developer-friendly commands
+ * wp-cli phpunit command
  *
- * @author pixline <pixline@gmail.com>
+ * @author Paolo Tresso <plugins@swergroup.com>
  * @version 0.1.0
  * @synopsis <action>
  */
