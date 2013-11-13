@@ -8,7 +8,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around phpmd.
+	 * PHP Mess Detector: analyze source code for several potential problems.
 	 *
 	 * @since 0.1.0
 	 */

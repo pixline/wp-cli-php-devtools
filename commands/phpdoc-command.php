@@ -8,7 +8,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around phpdocumentor to ease documentation production.
+	 * phpDocumentor: generate project documentation.
 	 *
 	 * @since 0.1.0
 	 */

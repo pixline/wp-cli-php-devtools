@@ -8,7 +8,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around phpcov.
+	 * PHP_CodeCoverage: measure and report testing coverage.
 	 *
 	 * @since 0.1.0
 	 */

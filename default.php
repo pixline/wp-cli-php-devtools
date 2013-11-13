@@ -9,7 +9,7 @@
  */
 
 // php-min
-include( 'commands/phpcov-command.php' );
+include( 'commands/minify-command.php' );
 
 // PHP Coverage
 include( 'commands/phpcov-command.php' );
@@ -27,7 +27,7 @@ include( 'commands/phpdoc-command.php' );
 include( 'commands/phploc-command.php' );
 
 // PHP Mess Detection
-include( 'commands/phpunit-command.php' );
+include( 'commands/phpmd-command.php' );
 
 // PHPunit
 include( 'commands/phpunit-command.php' );

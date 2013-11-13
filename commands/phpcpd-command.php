@@ -8,7 +8,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around phpcpd.
+	 * PHP Copy/Paste Detector: find duplicate PHP code.
 	 *
 	 * @since 0.1.0
 	 */

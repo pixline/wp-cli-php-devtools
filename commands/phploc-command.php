@@ -8,7 +8,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around phploc.
+	 * PHP Lines of Code: measure the size of a PHP project.
 	 *
 	 * @since 0.1.0
 	 */

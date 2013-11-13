@@ -9,7 +9,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around phpunit. Ease unit testing of both core and plugins.
+	 * Run PHPunit unit tests
 	 *
 	 * @since 0.1.0
 	 */

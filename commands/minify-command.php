@@ -8,7 +8,7 @@
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
-	 * Wrapper around minify.
+	 * Combines and minifies JavaScript and CSS files.
 	 *
 	 * @since 0.1.0
 	 */
