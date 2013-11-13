@@ -1,9 +1,9 @@
 {
-  "name": "pixline/wp-cli-task-command",
+  "name": "pixline/wp-cli-devtools",
   "type": "command",
-  "description": "Grunt.js partial replacement command(s)",
-  "keywords": ["wp-cli","grunt","task","development"],
-  "homepage": "https://bitbucket.org/pixline/wp-cli-task-command",
+  "description": "Wrapper around common development utilities",
+  "keywords": ["wp-cli","minify","phpcov","phpunit","phpcpd","phpdcd","phpdoc","phploc","phpmd","phpunit","development"],
+  "homepage": "https://github.com/pixline/wp-cli-devtools",
   "license": "MIT",
   "authors": [
     {
@@ -29,8 +29,8 @@
     "nitra/php-min": "dev-master"
   },
   "support": {
-    "issues": "https://bitbucket.org/pixline/wp-cli-task-command/issues?status=new&status=open",
-    "source": "https://bitbucket.org/pixline/wp-cli-task-command/src"
+    "issues": "https://github.com/pixline/wp-cli-devtools/issues",
+    "source": "https://github.com/pixline/wp-cli-devtools"
   },
   "autoload": {
     "files": [ "default.php" ]
