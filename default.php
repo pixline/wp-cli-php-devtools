@@ -24,10 +24,10 @@ include( 'commands/phpcs-command.php' );
 #include( 'commands/phpdcd-command.php' );
 
 // PHP Documentor
-#include( 'commands/phpdoc-command.php' );
+include( 'commands/phpdoc-command.php' );
 
 // PHP Lines of Code
-#include( 'commands/phploc-command.php' );
+include( 'commands/phploc-command.php' );
 
 // PHP Mess Detector
 include( 'commands/phpmd-command.php' );
