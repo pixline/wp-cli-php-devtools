@@ -32,7 +32,7 @@
     "sebastian/phpdcd": "1.0.*@dev",
     "phpdocumentor/phpdocumentor": "v2.1.0",
     "phpmd/phpmd": "1.5.*",
-    "nitra/php-min": "dev-master"
+    "packagist/yuicompressor-bin": "v2.4.8"
   },
   "support": {
     "issues": "https://github.com/pixline/wp-cli-devtools/issues",
