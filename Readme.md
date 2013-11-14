@@ -1,12 +1,14 @@
-# wp-cli DevTools
+# wp-cli devtools
 
-Wrapper commands around common utilities:
+[![Build Status](https://travis-ci.org/pixline/wp-cli-devtools.png?branch=master)](https://travis-ci.org/pixline/wp-cli-devtools)
+
+Useful wrapper around common cli utilities:
 
 * phpcs -- PHP Code Sniffer: detects violations of a defined set of coding standards.
 * phpmd -- PHP Mess Detector: analyze source code for several potential problems.
 * phpunit -- Run PHPunit unit tests.
 
-Upcoming commands:
+Upcoming:
 
 * minify -- Combines and minifies JavaScript and CSS files.
 * phpcov --  PHP_CodeCoverage: measure and report testing coverage.
