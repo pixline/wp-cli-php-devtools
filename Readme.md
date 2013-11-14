@@ -23,16 +23,16 @@ Upcoming commands:
 
 ## Setup
 
-1. Install wp-cli:
+* Install wp-cli:
 
-2. Install wp-cli-devtools
+* Install wp-cli-devtools
 
 ```
 cd /path/to/wp-cli/
 composer require pixline/wp-cli-devtools=dev-master
 ```
 
-3. Add wp-cli bin/ folder to $PATH:
+* Add wp-cli bin/ folder to $PATH:
 
 ```
 echo 'PATH="/path/to/wp-cli/bin/:$PATH" >> .profile
