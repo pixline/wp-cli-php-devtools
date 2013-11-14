@@ -5,7 +5,7 @@
  * Wrappers around common PHP/JS/CSS cli utilities.
  *
  * @author Paolo Tresso <plugins@swergroup.com>
- * @version 0.1.0
+ * @version 0.1.1
  */
 
 // php-minify
