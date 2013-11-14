@@ -1,0 +1,33 @@
+language: php
+
+php:
+    - 5.5
+    - 5.4
+    - 5.3
+
+env:
+    - WP_VERSION=3.7.1 WP_MULTISITE=0
+
+before_install:
+    - set -ex
+    # - composer install
+    # set up wp-cli
+    - export VERSION="dev-master"
+    - export WP_CORE_DIR="/tmp/wordpress"
+    - mkdir $WP_CORE_DIR
+    - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
+
+before_script:
+    - cd $TRAVIS_BUILD_DIR
+    - composer install --dev --no-interaction --prefer-source
+    - export PATH="$TRAVIS_BUILD_DIR/vendor/bin/:$PATH"
+    - cd $WP_CORE_DIR
+    - wp --info
+    - wp core download --version=$WP_VERSION
+    - wp core config --dbname=wordpress_test --dbuser=root
+    - wp core install --url=http://localhost --title="WP" --admin_user=admin --admin_email=test@example.org --admin_password=test
+    - wp phpcs
+    - wp phpmd
+    - wp phpunit
+
+script: exit 0
