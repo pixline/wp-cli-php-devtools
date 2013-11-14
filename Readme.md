@@ -12,8 +12,16 @@ Wrapper commands around common utilities:
 * phpmd -- PHP Mess Detector: analyze source code for several potential problems.
 * phpunit -- Run PHPunit unit tests.
 
+## System Requirements
+
+* PHP >=5.4
+* Composer
+* wp-cli
+* 
+
 ## Setup
 
 ```
-...
+cd /path/to/wp-cli/
+composer require pixline/wp-cli-devtools=dev-master
 ```
