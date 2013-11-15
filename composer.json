@@ -2,7 +2,7 @@
   "name": "pixline/wp-cli-devtools",
   "type": "command",
   "description": "Wrapper around common development utilities",
-  "keywords": ["wp-cli","minify","phpcov","phpunit","phpcpd","phpdcd","phpdoc","phploc","phpmd","phpunit","development"],
+  "keywords": ["wp-cli","phpcov","phpunit","phpcpd","phpdcd","phploc","phpmd","phpunit","development"],
   "homepage": "https://github.com/pixline/wp-cli-devtools",
   "license": "MIT",
   "authors": [
@@ -30,9 +30,7 @@
     "sebastian/phpcpd": "2.0.*",
     "phpunit/phpcov": "2.0.*@dev",
     "sebastian/phpdcd": "1.0.*@dev",
-    "phpdocumentor/phpdocumentor": "v2.1.0",
-    "phpmd/phpmd": "1.5.*",
-    "packagist/yuicompressor-bin": "v2.4.8"
+    "phpmd/phpmd": "1.5.*"
   },
   "support": {
     "issues": "https://github.com/pixline/wp-cli-devtools/issues",
