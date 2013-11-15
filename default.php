@@ -11,9 +11,6 @@
 // php-minify
 #include( 'commands/minify-command.php' );
 
-// mold (inspired by forge)
-include( 'commands/mold-command.php' );
-
 // PHP Coverage
 #include( 'commands/phpcov-command.php' );
 
