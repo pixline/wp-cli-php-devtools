@@ -4,18 +4,18 @@
 
 Useful wrapper around common cli utilities:
 
-* phpcs -- PHP Code Sniffer: detects violations of a defined set of coding standards.
-* phpmd -- PHP Mess Detector: analyze source code for several potential problems.
-* phpunit -- Run PHPunit unit tests.
-* phpcov --  PHP_CodeCoverage: measure and report testing coverage.
-* phpcpd -- PHP Copy/Paste Detector: find duplicate PHP code.
-* phpdcd -- PHP Dead Code Detector: find dead/unused PHP code.
-* phploc -- PHP Lines of Code: measure the size of a PHP project.
+* `phpcs` -- Detects violations of a defined set of coding standards via [PHP Code Sniffer](https://github.com/squizlabs/php_codesniffer).
+* `phpmd` -- Analyze source code for several potential problems via [PHP Mess Detector](https://github.com/phpmd/phpmd)
+* `phpunit` -- Run [PHPunit](https://github.com/sebastianbergmann/phpunit) unit tests.
+* `phpcpd` -- Find duplicate PHP code via [PHP Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd)
+* `phpdcd` -- Find dead/unused PHP code via [PHP Dead Code Detector](https://github.com/sebastianbergmann/phpdcd)
+* `phploc` -- Measure the size of a PHP project via [PHP Lines of Code](https://github.com/sebastianbergmann/phploc)
 
 Work in progress:
 
-* minify -- Combines and minifies JavaScript and CSS files.
-* phpdoc -- phpDocumentor: generate project documentation.
+* `minify` -- Combines and minifies JavaScript and CSS files via YUI Compressor.
+* `phpdoc` -- Generate project documentation via phpDocumentor.
+* `phpcov` -- Measure and report code testing coverage via PHP_CodeCoverage.
 
 ## System Requirements
 
