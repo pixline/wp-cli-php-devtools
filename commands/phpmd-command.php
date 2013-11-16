@@ -34,7 +34,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			#print_r($assoc_args);
 			if ( null === $args[0] ):
 				WP_CLI::error( 'Usage: wp phpmd run <folder>' );
-			else:
+			else :
 				# WP_CLI::launch( 'phpcs -i' );
 				$cmd = 'phpmd ' . $args[0] . ' text codesize,controversial,design,naming,unusedcode --extensions=php';
 				WP_CLI::launch( $cmd );

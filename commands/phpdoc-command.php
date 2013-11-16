@@ -34,8 +34,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			#print_r($assoc_args);
 			if ( null === $args[0] ):
 				WP_CLI::error( 'Usage: wp phpdoc run <folder>' );
-			else:
-				# WP_CLI::launch( 'phpcs -i' );
+			else :
 				$cmd = 'phpdoc.php list';
 				WP_CLI::launch( $cmd );
 			endif;

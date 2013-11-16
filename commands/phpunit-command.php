@@ -18,9 +18,9 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		
 		private function _do_core( $unit_tests_dir ){
 			WP_CLI::line( 'Doing Core' );
-			if( is_dir( $unit_tests_dir ) ):
+			if ( is_dir( $unit_tests_dir ) ):
 				WP_CLI::launch( 'cd ' . $unit_tests_dir . ' && phpunit' );
-			else:
+			else :
 				WP_CLI::error( 'Please run `wp core install-tests` first!' );
 			endif;
 		}
@@ -28,9 +28,9 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		private function _do_plugin( $slug, $tests ){
 			WP_CLI::line( 'Doing Plugin ' . $slug );
 			$plugin_dir = WP_PLUGIN_DIR . '/' . $slug;
-			if( is_dir( $plugin_dir ) ):
+			if ( is_dir( $plugin_dir ) ):
 				WP_CLI::launch( 'export WP_TESTS_DIR='.$tests.'; cd ' . $plugin_dir . '; phpunit -c phpunit.xml ' );
-			else:
+			else :
 				WP_CLI::error( 'Can\'t find plugin folder: ' . $plugin_dir );
 			endif;
 		}
@@ -60,7 +60,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * @since 0.1.0
 		 */
 		public function run( $args = null, $assoc_args = null ){
-			$unit_tests_dir =  ( false === isset( $assoc_args['unit_test'] ) ) ? ABSPATH . '/unit-tests' : $assoc_args['unit_test'];
+			$unit_tests_dir = ( false === isset( $assoc_args['unit_test'] ) ) ? ABSPATH . '/unit-tests' : $assoc_args['unit_test'];
 			
 			if ( isset( $assoc_args['core'] ) ):
 				self::_do_core( $unit_tests_dir );
@@ -68,7 +68,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			elseif ( isset( $assoc_args['plugin'] ) && null !== $assoc_args['plugin'] ):
 				self::_do_plugin( $assoc_args['plugin'], $unit_tests_dir );
 
-			else:
+			else :
 				WP_CLI::line( 'Usage: wp phpunit [--core] [--plugin=<plugin>]' );
 
 			endif;

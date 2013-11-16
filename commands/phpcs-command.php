@@ -34,10 +34,9 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			#print_r($assoc_args);
 			if ( null === $assoc_args['files'] ):
 				WP_CLI::error( 'Usage: wp phpcs <path>' );
-			else:
-				# WP_CLI::launch( 'phpcs -i' );
+			else :
 				$checklist = explode( ',', $assoc_args['files'] );
-				foreach( $checklist as $check ):
+				foreach ( $checklist as $check ):
 					WP_CLI::launch( 'phpcs -s -p -v --standard=WordPress ' . $check );
 				endforeach;
 			endif;

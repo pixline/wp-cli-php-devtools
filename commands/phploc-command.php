@@ -34,8 +34,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			#print_r($assoc_args);
 			if ( null === $args[0] ):
 				WP_CLI::error( 'Usage: wp phloc run <folder>' );
-			else:
-				# WP_CLI::launch( 'phpcs -i' );
+			else :
 				$cmd = 'phploc --progress ' . $args[0] . '';
 				WP_CLI::launch( $cmd );
 			endif;

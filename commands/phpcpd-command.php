@@ -47,8 +47,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			
 			if ( null === $args[0] ):
 				WP_CLI::error( 'Usage: wp phpdcd run [switches] <folder>' );
-			else:
-				# WP_CLI::launch( 'phpcs -i' );
+			else :
 				$cmd = 'phpcpd ' . $switches . $args[0];
 				WP_CLI::launch( $cmd );
 			endif;
