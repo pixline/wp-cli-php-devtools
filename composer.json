@@ -13,19 +13,13 @@
       "role": "Developer"
     }
   ],
-  "repositories": [
-      {
-        "type":"vcs",
-        "url":"https://github.com/pixline/PHP_CodeSniffer"
-      }
-  ],
   "require": {
     "php": ">=5.4",
     "wp-cli/wp-cli": ">=0.12",
     "psy/psysh": "dev-master",
     "phpunit/phpunit": "3.7.*",
     "phpunit/php-invoker": ">=1.1.0",
-    "pixline/php_codesniffer": "dev-master",
+    "pixline/php_codesniffer_wp_standard": "dev-master",
     "phploc/phploc": "2.0.*",
     "sebastian/phpcpd": "2.0.*",
     "phpunit/phpcov": "2.0.*@dev",
