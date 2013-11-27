@@ -10,15 +10,16 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 	/**
 	 * PHP CodeSniffer: detects violations of a defined set of coding standards.
 	 *
-	 * This wp-cli command is a WP-focused wrapper around PHP CodeSniffer.
+	 * This wp-cli command is a WordPress-focused wrapper around PHP CodeSniffer,
+	 * let developers and testers run phpcs with ease over a theme or plugin.
+	 *
 	 *
 	 * @since 0.1.0
 	 */
 	class WP_CLI_Phpcs_Command extends WP_CLI_Command{
 		
 		/**
-		 * Run PHP Code Sniffer on theme or plugin folder
-		 *
+		 * Run PHP Code Sniffer over a theme or plugin folder.
 		 *
 		 * ## OPTIONS
 		 *
@@ -26,8 +27,21 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * : Plugin or theme slug to check.
 		 *
 		 * --flags=[flags]
-		 * : phpcs command line options. 
-		 * Defaults: '-p --standard=WordPress --extensions=php'
+		 * : phpcs command line options. Default: '-p'
+		 *
+		 * ## USAGE
+		 *
+		 * It will check for a folder with the given slug in both themes and plugins
+		 * main folders, and will run phpcs on that folder with the default flags:
+		 *
+		 *	phpcs -p --standard=WordPress --extensions=php path/to/folder
+		 *
+		 * The only required argument is the plugin/theme slug you're going to check,
+		 * optional --flags will overwrite the variable section of the commandline above
+		 * ('-p') and will add standard and extensions arguments to your given flags:
+		 * setting something like --flags='-s -v' will result in this command:
+		 * 
+		 *	phpcs -s -v --standard=WordPress --extensions=php 
 		 *
 		 * ## EXAMPLES
 		 *
@@ -40,7 +54,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 */
 		public function run( $args = null, $assoc_args = null ){
 			if ( isset( $assoc_args['flags'] ) ):
-				$default_flags = $assoc_args['flags'] . ' --standard=WordPress ';
+				$default_flags = $assoc_args['flags'] . ' --standard=WordPress --extensions=php ';
 			else :
 				$default_flags = '-p --standard=WordPress --extensions=php ';
 			endif;
