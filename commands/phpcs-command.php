@@ -26,8 +26,8 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * : Plugin or theme slug to check.
 		 *
 		 * --flags=[flags]
-		 * : phpcs command line options. Default: '-p'.
-		 * '--standard=WordPress' is declared by default.
+		 * : phpcs command line options. 
+		 * Defaults: '-p --standard=WordPress --extensions=php'
 		 *
 		 * ## EXAMPLES
 		 *
@@ -42,20 +42,13 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			if ( isset( $assoc_args['flags'] ) ):
 				$default_flags = $assoc_args['flags'] . ' --standard=WordPress ';
 			else :
-				$default_flags = '-p --standard=WordPress ';
+				$default_flags = '-p --standard=WordPress --extensions=php ';
 			endif;
 				
 			if ( null !== $args[0] ):
 				self::_run_phpcs( $args[0], $default_flags );
 			else :
 				WP_CLI::error( 'Missing plugin/theme slug.' );
-				/*
-			elseif ( null != $assoc_args['files'] ):
-				$checklist = explode( ',', $assoc_args['files'] );
-				foreach ( $checklist as $check ):
-					WP_CLI::launch( 'phpcs -s -p -v --standard=WordPress ' . $check );
-				endforeach;
-				*/
 			endif;
 		}
 		
