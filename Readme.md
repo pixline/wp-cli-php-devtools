@@ -38,13 +38,15 @@ cd /path/to/wp-cli/
 composer require pixline/wp-cli-devtools=dev-master
 ```
 
-* Add wp-cli bin/ folder to $PATH (!important):
+* Add wp-cli bin/ folder to $PATH (important!!):
+
 ```
-echo 'PATH="/path/to/wp-cli/bin/:$PATH" >> .profile
+echo 'PATH="/path/to/wp-cli/bin/:$PATH" >> .bash_profile
 ```
 
 
 ## License
 
 Copyright (c) 2013+ Paolo Tresso <plugins@swergroup.com>
+
 Plugin released with the [MIT License](http://opensource.org/licenses/MIT)
