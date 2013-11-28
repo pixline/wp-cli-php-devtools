@@ -3,7 +3,6 @@
  * wp-cli phpreport command
  *
  * @author Paolo Tresso <plugins@swergroup.com>
- * @since 0.2.1
  */
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){

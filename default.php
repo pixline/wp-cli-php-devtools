@@ -2,16 +2,16 @@
 /**
  * wp-cli devtools
  *
- * Wrappers around common PHP/JS/CSS cli utilities.
+ * Wrappers around common development utilities
  *
  * @author Paolo Tresso <plugins@swergroup.com>
- * @version 0.2.1
+ * @version 0.2.2
  */
 
-// php-minify
+// work in progress: php-minify
 #include( 'commands/minify-command.php' );
 
-// PHP Coverage
+// work in progress: PHP Coverage
 #include( 'commands/phpcov-command.php' );
 
 // PHP Copy/Paste Detector
@@ -23,7 +23,7 @@ include( 'commands/phpcs-command.php' );
 // PHP Dead Code Detector
 include( 'commands/phpdcd-command.php' );
 
-// PHP Documentor
+// work in progress: PHP Documentor
 #include( 'commands/phpdoc-command.php' );
 
 // PHP Lines of Code

@@ -3,7 +3,6 @@
  * wp-cli phpdcd command
  *
  * @author Paolo Tresso <plugins@swergroup.com>
- * @version 0.1.0
  */
 
 if ( true === class_exists( 'WP_CLI_Command' ) ){
