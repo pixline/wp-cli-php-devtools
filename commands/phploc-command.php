@@ -19,12 +19,17 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## OPTIONS
 		 *
-		 * <folder>
-		 * : Folder to check
+		 * <slug>
+		 * : Plugin or theme slug to check.
+		 *
+		 * --flags=[flags]
+		 * : phploc command line options. Defaults : 
+		 * '--names="*.php" --count-tests --progress'
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phploc run <slug>
+		 * wp phploc run uploadplus
+		 * wp phploc run twentythirteen --flags='--names="*.php" --log-xml'
 		 *
 		 * @synopsis <slug> [--flags]
 		 *

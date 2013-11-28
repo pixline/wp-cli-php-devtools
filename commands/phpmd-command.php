@@ -19,14 +19,19 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## OPTIONS
 		 *
-		 * <folder>
-		 * : Folder to check
+		 * <slug>
+		 * : Plugin or theme slug to check.
+		 *
+		 * --flags=[flags]
+		 * : phpmd command line options. Defaults: 
+		 * 'text codesize,controversial,design,naming,unusedcode --suffixes=php'
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phpmd run folder/
+		 * wp phpmd run uploadplus
+		 * wp phpmd run twentythirteen --flags='json codesize,naming,unusedcode --suffixes=php'
 		 *
-		 * @synopsis <folder>
+		 * @synopsis <slug> [--flags]
 		 *
 		 * @since 0.1.0
 		 */

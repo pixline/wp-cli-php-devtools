@@ -20,11 +20,15 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * ## OPTIONS
 		 *
 		 * <slug>
+		 * : Plugin or theme slug to check.
 		 *
-		 * --flags=<flags>
+		 * --flags=[flags]
+		 * : phpdcd command line options. Default: '--suffixes php'
 		 *
 		 * ## EXAMPLES
 		 *
+		 *	wp phpdcd run uploadplus
+		 *	wp phpdcd run twentythirteen --flags="--recursive --suffixes php --exclude vendor"
 		 *
 		 * @synopsis <slug> [--flags]
 		 *

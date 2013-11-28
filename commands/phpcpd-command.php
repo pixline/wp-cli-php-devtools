@@ -20,12 +20,15 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * ## OPTIONS
 		 *
 		 * <slug>
+		 * : Plugin or theme slug to check.
 		 *
-		 * --flags=<flags>
+		 * --flags=[flags]
+		 * : phpcpd command line options. Default: '--progress'
 		 *
 		 * ## EXAMPLES
 		 *
 		 * wp phpcpd run uploadplus
+		 * wp phpcpd run twentythirteen --flags='--min-lines=2 --min-tokens=30'
 		 *
 		 * @synopsis <slug> [--flags]
 		 *
@@ -43,7 +46,6 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 				WP_CLI::error( 'Missing plugin/theme slug.' );
 			endif;
 		}
-		
 		
 		private function _run_phpcpd( $slug, $flags ){
 			$plugin_path = WP_PLUGIN_DIR . '/' . $slug;
