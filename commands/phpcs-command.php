@@ -73,14 +73,14 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 */
 		private function _run_phpcs( $slug, $flags ){
 			$plugin_path = WP_PLUGIN_DIR . '/' . $slug;
-			$theme_path = WP_CONTENT_DIR . '/themes/' . $slug;
+			$theme_path  = WP_CONTENT_DIR . '/themes/' . $slug;
 			
 			if ( is_dir( $theme_path ) && false === is_dir( $plugin_path )  ):
 				WP_CLI::launch( 'phpcs '.$flags . $theme_path );
 			elseif ( is_dir( $plugin_path ) && false === is_dir( $theme_path ) ) :
 				WP_CLI::launch( 'phpcs '.$flags . $plugin_path );
 			else :
-				WP_CLI::error( 'Neither theme nor plugin slug provided.' );
+				WP_CLI::error( 'No theme or plugin with that slug.' );
 			endif;
 		}
 		
