@@ -24,19 +24,36 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phpmd run folder/
+		 * wp phploc run <slug>
 		 *
-		 * @synopsis <folder>
+		 * @synopsis <slug> [--flags]
 		 *
-		 * @since 0.1.0
+		 * @since 0.2.1
 		 */
 		public function run( $args = null, $assoc_args = null ){
-			#print_r($assoc_args);
-			if ( null === $args[0] ):
-				WP_CLI::error( 'Usage: wp phloc run <folder>' );
+			if ( isset( $assoc_args['flags'] ) ):
+				$default_flags = $assoc_args['flags'] . ' ';
 			else :
-				$cmd = 'phploc --progress ' . $args[0] . '';
-				WP_CLI::launch( $cmd );
+				$default_flags = '--names="*.php" --count-tests --progress ';
+			endif;
+			if ( null !== $args[0] ):
+				self::_run_phploc( $args[0], $default_flags );
+			else :
+				WP_CLI::error( 'Missing plugin/theme slug.' );
+			endif;
+		}
+		
+		
+		private function _run_phploc( $slug, $flags ){
+			$plugin_path = WP_PLUGIN_DIR . '/' . $slug;
+			$theme_path  = WP_CONTENT_DIR . '/themes/' . $slug;
+			
+			if ( is_dir( $theme_path ) && false === is_dir( $plugin_path )  ):
+				WP_CLI::launch( 'phploc '.$flags . $theme_path );
+			elseif ( is_dir( $plugin_path ) && false === is_dir( $theme_path ) ) :
+				WP_CLI::launch( 'phploc '.$flags . $plugin_path );
+			else :
+				WP_CLI::error( 'Plugin/theme not found' );
 			endif;
 		}
 	}

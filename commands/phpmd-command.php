@@ -31,15 +31,32 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * @since 0.1.0
 		 */
 		public function run( $args = null, $assoc_args = null ){
-			#print_r($assoc_args);
-			if ( null === $args[0] ):
-				WP_CLI::error( 'Usage: wp phpmd run <folder>' );
+			if ( isset( $assoc_args['flags'] ) ):
+				$default_flags = $assoc_args['flags'] . ' ';
 			else :
-				# WP_CLI::launch( 'phpcs -i' );
-				$cmd = 'phpmd ' . $args[0] . ' text codesize,controversial,design,naming,unusedcode --extensions=php';
-				WP_CLI::launch( $cmd );
+				$default_flags = ' text codesize,controversial,design,naming,unusedcode --suffixes=php ';
+			endif;
+			if ( null !== $args[0] ):
+				self::_run_phpmd( $args[0], $default_flags );
+			else :
+				WP_CLI::error( 'Missing plugin/theme slug.' );
 			endif;
 		}
+		
+		
+		private function _run_phpmd( $slug, $flags ){
+			$plugin_path = WP_PLUGIN_DIR . '/' . $slug;
+			$theme_path  = WP_CONTENT_DIR . '/themes/' . $slug;
+			
+			if ( is_dir( $theme_path ) && false === is_dir( $plugin_path )  ):
+				WP_CLI::launch( 'phpmd '. $theme_path . $flags );
+			elseif ( is_dir( $plugin_path ) && false === is_dir( $theme_path ) ) :
+				WP_CLI::launch( 'phpmd '. $plugin_path . $flags );
+			else :
+				WP_CLI::error( 'Plugin/theme not found' );
+			endif;
+		}
+
 	}
 
 	WP_CLI::add_command( 'phpmd', 'WP_CLI_Phpmd_Command' );

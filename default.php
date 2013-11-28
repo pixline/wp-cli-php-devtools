@@ -32,6 +32,9 @@ include( 'commands/phploc-command.php' );
 // PHP Mess Detector
 include( 'commands/phpmd-command.php' );
 
+// PHP Report (bundled commands)
+include( 'commands/phpreport-command.php' );
+
 // PHPunit
 include( 'commands/phpunit-command.php' );
 

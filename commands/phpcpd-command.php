@@ -56,24 +56,6 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			else :
 				WP_CLI::error( 'Plugin/theme not found' );
 			endif;
-			/*
-			$switches = '';
-			if ( isset( $assoc_args['exclude'] ) ){
-				$excludes = explode( ',', $assoc_args['exclude'] );
-				foreach ( $excludes as $avoid ):
-					$switches .= '--exclude ' . $avoid . ' ';
-				endforeach;
-			}
-			$switches .= '--progress ';
-			
-			if ( null === $args[0] ):
-				WP_CLI::error( 'Usage: wp phpdcd run [switches] <folder>' );
-			else :
-				$cmd = 'phpcpd ' . $switches . $args[0];
-				WP_CLI::launch( $cmd );
-			endif;
-			*/
-			
 		}
 		
 	}
