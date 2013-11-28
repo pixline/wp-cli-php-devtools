@@ -47,6 +47,6 @@ echo 'PATH="/path/to/wp-cli/bin/:$PATH" >> .bash_profile
 
 ## License
 
-Copyright (c) 2013+ Paolo Tresso <plugins@swergroup.com>
+Copyright (c) 2013+ Paolo Tresso / [SWERgroup](http://swergroup.com)
 
 Plugin released with the [MIT License](http://opensource.org/licenses/MIT)
