@@ -5,7 +5,7 @@
  * Wrappers around common development utilities
  *
  * @author Paolo Tresso <plugins@swergroup.com>
- * @version 0.2.2
+ * @version 0.2.3
  */
 
 // work in progress: php-minify
