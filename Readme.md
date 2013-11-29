@@ -31,11 +31,12 @@ Work in progress:
 ## Setup
 
 * Install [wp-cli](https://wp-cli.org)
-* Install wp-cli-php-devtools
+* Install wp-cli-php-devtools:
 
 ```
 cd /path/to/wp-cli/
-composer require pixline/wp-cli-php-devtools=dev-master
+composer config repositories.wp-cli composer http://wp-cli.org/package-index/
+composer require pixline/wp-cli-php-devtools=0.2.3
 ```
 
 * Add wp-cli bin/ folder to $PATH (important!!):
