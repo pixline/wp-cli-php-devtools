@@ -27,11 +27,6 @@ before_script:
     - wp core download --version=$WP_VERSION
     - wp core config --dbname=wordpress_test --dbuser=root
     - wp core install --url=http://localhost --title="WP" --admin_user=admin --admin_email=test@example.org --admin_password=test
-    - wp --info
-    - wp phpcs
-    - wp phpdcd
-    - wp phploc
-    - wp phpmd
-    - wp phpunit
+    - wp 
 
 script: exit 0
