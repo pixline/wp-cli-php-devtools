@@ -27,14 +27,14 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phpmd run uploadplus
-		 * wp phpmd run twentythirteen --flags='json codesize,naming,unusedcode --suffixes=php'
+		 * wp phpmd uploadplus
+		 * wp phpmd twentythirteen --flags='json codesize,naming,unusedcode --suffixes=php'
 		 *
 		 * @synopsis <slug> [--flags]
 		 *
 		 * @since 0.1.0
 		 */
-		public function run( $args = null, $assoc_args = null ){
+		public function __invoke( $args = null, $assoc_args = null ){
 			if ( isset( $assoc_args['flags'] ) ):
 				$default_flags = $assoc_args['flags'] . ' ';
 			else :

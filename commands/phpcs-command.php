@@ -39,14 +39,14 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phpcs run uploadplus
-		 * wp phpcs run twentythirteen --flags='-n -p -s -v'
+		 * wp phpcs uploadplus
+		 * wp phpcs twentythirteen --flags='-n -p -s -v'
 		 *
 		 * @synopsis <slug> [--flags]
 		 *
 		 * @since 0.1.0
 		 */
-		public function run( $args = null, $assoc_args = null ){
+		public function __invoke( $args = null, $assoc_args = null ){
 			if ( isset( $assoc_args['flags'] ) ):
 				$default_flags = $assoc_args['flags'] . ' --standard=WordPress --extensions=php ';
 			else :

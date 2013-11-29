@@ -27,14 +27,14 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phploc run uploadplus
-		 * wp phploc run twentythirteen --flags='--names="*.php" --log-xml'
+		 * wp phploc uploadplus
+		 * wp phploc twentythirteen --flags='--names="*.php" --log-xml'
 		 *
 		 * @synopsis <slug> [--flags]
 		 *
 		 * @since 0.2.1
 		 */
-		public function run( $args = null, $assoc_args = null ){
+		public function __invoke( $args = null, $assoc_args = null ){
 			if ( isset( $assoc_args['flags'] ) ):
 				$default_flags = $assoc_args['flags'] . ' ';
 			else :

@@ -1,4 +1,4 @@
-# wp-cli PHP developer tools
+# wp-cli PHP developer tools 0.2.4
 
 [![Build Status](https://travis-ci.org/pixline/wp-cli-php-devtools.png?branch=master)](https://travis-ci.org/pixline/wp-cli-php-devtools) [![Support](https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CX6VQ6FVJFN4L)
 
@@ -36,7 +36,7 @@ Work in progress:
 ```
 cd /path/to/wp-cli/
 composer config repositories.wp-cli composer http://wp-cli.org/package-index/
-composer require pixline/wp-cli-php-devtools=0.2.3
+composer require pixline/wp-cli-php-devtools=0.2.4
 ```
 
 * Add wp-cli bin/ folder to $PATH (important!!):
