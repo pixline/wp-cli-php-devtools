@@ -26,14 +26,14 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## EXAMPLES
 		 *
-		 *	wp phpdcd run uploadplus
-		 *	wp phpdcd run twentythirteen --flags="--recursive --suffixes php --exclude vendor"
+		 *	wp phpdcd uploadplus
+		 *	wp phpdcd twentythirteen --flags="--recursive --suffixes php --exclude vendor"
 		 *
 		 * @synopsis <slug> [--flags]
 		 *
 		 * @since 0.1.0
 		 */
-		public function run( $args = null, $assoc_args = null ){
+		public function __invoke( $args = null, $assoc_args = null ){
 			if ( isset( $assoc_args['flags'] ) ):
 				$default_flags = $assoc_args['flags'] . ' ';
 			else :

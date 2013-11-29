@@ -13,7 +13,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 	 */
 	class WP_CLI_Phpreport_Command extends WP_CLI_Command{
 		
-		public function run( $args = null, $assoc_args = null ){
+		public function __invoke( $args = null, $assoc_args = null ){
 			WP_CLI::line( 'Doing '. $args[0] );
 			$plugin_path = WP_PLUGIN_DIR . '/' . $args[0];
 			$theme_path  = WP_CONTENT_DIR . '/themes/' . $args[0];
@@ -29,22 +29,22 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 
 		private function _do_commands( $slug, $path ){
 			WP_CLI::success( 'PHP Copy/Paste Detector: '. $args[0] );
-			WP_CLI::launch( 'wp phpcpd run ' . $slug );
+			WP_CLI::launch( 'wp phpcpd ' . $slug );
 
 			WP_CLI::success( 'PHP CodeSniffer: '. $args[0] );
-			WP_CLI::launch( 'wp phpcs run ' . $slug );
+			WP_CLI::launch( 'wp phpcs ' . $slug );
 
 			WP_CLI::success( 'PHP Dead Code Detector: '. $args[0] );
-			WP_CLI::launch( 'wp phpdcd run ' . $slug );
+			WP_CLI::launch( 'wp phpdcd ' . $slug );
 
 			WP_CLI::success( 'PHP Lines of Code: '. $args[0] );
-			WP_CLI::launch( 'wp phploc run ' . $slug );
+			WP_CLI::launch( 'wp phploc ' . $slug );
 
 			WP_CLI::success( 'PHP Mess Detector: '. $args[0] );
-			WP_CLI::launch( 'wp phpmd run ' . $slug );
+			WP_CLI::launch( 'wp phpmd ' . $slug );
 
 			WP_CLI::success( 'PHPunit: '. $args[0] );
-			WP_CLI::launch( 'wp phpunit run --plugin=' . $slug );
+			WP_CLI::launch( 'wp phpunit --plugin=' . $slug );
 		}
 
 
