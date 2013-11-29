@@ -1,9 +1,9 @@
 {
-  "name": "pixline/wp-cli-devtools",
+  "name": "pixline/wp-cli-php-devtools",
   "type": "command",
   "description": "Wrapper around common development utilities",
-  "keywords": ["wp-cli","phpcov","phpunit","phpcpd","phpdcd","phploc","phpmd","phpunit","development"],
-  "homepage": "https://github.com/pixline/wp-cli-devtools",
+  "keywords": ["wp-cli","phpcpd","phpcs","phpdcd","phploc","phpmd","phpunit","phpreport","development"],
+  "homepage": "https://github.com/pixline/wp-cli-php-devtools",
   "license": "MIT",
   "authors": [
     {
@@ -16,7 +16,6 @@
   "require": {
     "php": ">=5.4",
     "wp-cli/wp-cli": ">=0.12",
-    "psy/psysh": "dev-master",
     "phpunit/phpunit": "3.7.*",
     "phpunit/php-invoker": ">=1.1.0",
     "pixline/php_codesniffer_wp_standard": "dev-master",
