@@ -27,11 +27,11 @@ before_script:
     - wp core download --version=$WP_VERSION
     - wp core config --dbname=wordpress_test --dbuser=root
     - wp core install --url=http://localhost --title="WP" --admin_user=admin --admin_email=test@example.org --admin_password=test
-    - wp phpcpd akismet
-    - wp phpcs akismet
-    - wp phpdcd akismet
-    - wp phploc akismet
-    - wp phpmd akismet
-    - wp phpunit --plugin=akismet
+    - wp --info
+    - wp phpcs
+    - wp phpdcd
+    - wp phploc
+    - wp phpmd
+    - wp phpunit
 
 script: exit 0
