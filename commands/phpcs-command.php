@@ -22,7 +22,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * <slug>
 		 * : Plugin or theme slug to check.
 		 *
-		 * --flags=[flags]
+		 * [--flags=<flags>]
 		 * : phpcs command line options. Default: '-p'
 		 *
 		 * ## USAGE
@@ -42,13 +42,18 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * wp phpcs uploadplus
 		 * wp phpcs twentythirteen --flags='-n -p -s -v'
 		 *
-		 * @synopsis <slug> [--flags]
+		 * @synopsis <slug> [--flags=<flags>]
 		 *
 		 * @since 0.1.0
 		 */
 		public function __invoke( $args = null, $assoc_args = null ){
-			if ( isset( $assoc_args['flags'] ) ):
-				$default_flags = $assoc_args['flags'] . ' --standard=WordPress --extensions=php ';
+			
+			if (
+				isset( $assoc_args['flags'] ) ||
+				isset( $assoc_args[$args[0]]['flags'] )
+				):
+				$custom = isset( $assoc_args[$args[0]]['flags'] ) ? $assoc_args[$args[0]]['flags'] : $assoc_args['flags'];				
+				$default_flags = $custom . ' --standard=WordPress --extensions=php ';
 			else :
 				$default_flags = '-p --standard=WordPress --extensions=php ';
 			endif;
