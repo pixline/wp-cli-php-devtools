@@ -25,7 +25,7 @@
     "phpunit/phpunit": "3.7.*",
     "phpunit/php-invoker": ">=1.1.0",
     "squizlabs/PHP_CodeSniffer": ">=1.5.1",
-    "WordPress-Coding-Standards/WordPress-Coding-Standards": ">=2013-10-06",
+    "WordPress-Coding-Standards/WordPress-Coding-Standards": "master",
     "phploc/phploc": "2.0.*",
     "sebastian/phpcpd": "2.0.*",
     "phpunit/phpcov": "2.0.*@dev",
