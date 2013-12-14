@@ -51,16 +51,16 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 *
 		 * ## EXAMPLES
 		 *
-		 * wp phpunit run --core
-		 * wp phpunit run --plugin=plugin-slug
-		 * wp phpunit run --core --unit_tests=/home/user/src/wp-unit-tests/
+		 * wp phpunit --core
+		 * wp phpunit --plugin=plugin-slug
+		 * wp phpunit --core --unit_tests=/home/user/src/wp-unit-tests/
 		 *
-		 * @synopsis [--core] [--plugin=<plugin>] [--tests-folder=<tests>]
+		 * @synopsis [--core] [--plugin=<plugin>] [--unit_tests=<tests>]
 		 *
 		 * @since 0.1.0
 		 */
-		public function run( $args = null, $assoc_args = null ){
-			$unit_tests_dir = ( false === isset( $assoc_args['unit_test'] ) ) ? ABSPATH . '/unit-tests' : $assoc_args['unit_test'];
+		public function __invoke( $args = null, $assoc_args = null ){
+			$unit_tests_dir = ( false === isset( $assoc_args['unit_tests'] ) ) ? ABSPATH . '/unit-tests' : $assoc_args['unit_tests'];
 			
 			if ( isset( $assoc_args['core'] ) ):
 				self::_do_core( $unit_tests_dir );
