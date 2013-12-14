@@ -35,7 +35,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		 * ('-p') , while --standard and --extensions are by default. Setting flags like
 		 * --flags='-s -v' equals this command:
 		 * 
-		 *	phpcs -s -v --standard=WordPress --extensions=php
+		 *	phpcs -s -v --config-set installed_paths /path/to/standard --standard=WordPress --extensions=php
 		 *
 		 * ## EXAMPLES
 		 *
@@ -53,9 +53,9 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 				isset( $assoc_args[$args[0]]['flags'] )
 				):
 				$custom = isset( $assoc_args[$args[0]]['flags'] ) ? $assoc_args[$args[0]]['flags'] : $assoc_args['flags'];				
-				$default_flags = $custom . ' --standard=WordPress --extensions=php ';
+				$default_flags = $custom . ' --extensions=php ';
 			else :
-				$default_flags = '-p --standard=WordPress --extensions=php ';
+				$default_flags = '--config-set installed_paths ' . WPCS_PATH . ' -p --standard=WordPress --extensions=php ';
 			endif;
 				
 			if ( null !== $args[0] ):

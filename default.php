@@ -8,6 +8,8 @@
  * @version 0.2.5
  */
 
+define( 'WPCS_PATH', dirname( __FILE__ ) . '/vendor/WordPress-Coding-Standards/WordPress-Coding-Standards/' );
+
 // work in progress: php-minify
 #include( 'commands/minify-command.php' );
 

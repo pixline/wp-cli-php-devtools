@@ -13,17 +13,34 @@
       "role": "Developer"
     }
   ],
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "WordPress-Coding-Standards/WordPress-Coding-Standards",
+        "version": "2013-10-06",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/2013-10-06.zip"
+        }
+      }
+    }
+  ],
   "require": {
     "php": ">=5.4",
     "wp-cli/wp-cli": ">=0.12",
     "phpunit/phpunit": "3.7.*",
     "phpunit/php-invoker": ">=1.1.0",
-    "pixline/php_codesniffer_wp_standard": "dev-master",
+    "squizlabs/PHP_CodeSniffer": ">=1.5.1",
+    "WordPress-Coding-Standards/WordPress-Coding-Standards": "2013-10-06",
     "phploc/phploc": "2.0.*",
     "sebastian/phpcpd": "2.0.*",
     "phpunit/phpcov": "2.0.*@dev",
     "sebastian/phpdcd": "1.0.*@dev",
     "phpmd/phpmd": "1.5.*"
+  },
+  "suggest": {
+    "pixline/wp-cli-proxy": "dev-master"
   },
   "support": {
     "issues": "https://github.com/pixline/wp-cli-devtools/issues",
