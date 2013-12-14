@@ -55,8 +55,10 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			$theme_path  = WP_CONTENT_DIR . '/themes/' . $slug;
 			
 			if ( is_dir( $theme_path ) && false === is_dir( $plugin_path )  ):
+				WP_CLI::line( 'phpcpd '.$flags . $theme_path );
 				WP_CLI::launch( 'phpcpd '.$flags . $theme_path );
 			elseif ( is_dir( $plugin_path ) && false === is_dir( $theme_path ) ) :
+				WP_CLI::line( 'phpcpd '.$flags . $plugin_path );
 				WP_CLI::launch( 'phpcpd '.$flags . $plugin_path );
 			else :
 				WP_CLI::error( 'Plugin/theme not found' );

@@ -57,8 +57,10 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			$theme_path  = WP_CONTENT_DIR . '/themes/' . $slug;
 			
 			if ( is_dir( $theme_path ) && false === is_dir( $plugin_path )  ):
+				WP_CLI::line( 'phpmd '. $theme_path . $flags );
 				WP_CLI::launch( 'phpmd '. $theme_path . $flags );
 			elseif ( is_dir( $plugin_path ) && false === is_dir( $theme_path ) ) :
+				WP_CLI::line( 'phpmd '. $plugin_path . $flags );
 				WP_CLI::launch( 'phpmd '. $plugin_path . $flags );
 			else :
 				WP_CLI::error( 'Plugin/theme not found' );

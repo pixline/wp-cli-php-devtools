@@ -17,6 +17,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 		private function _do_core( $unit_tests_dir ){
 			WP_CLI::line( 'Doing Core' );
 			if ( is_dir( $unit_tests_dir ) ):
+				WP_CLI::line( 'cd ' . $unit_tests_dir . ' && phpunit' );
 				WP_CLI::launch( 'cd ' . $unit_tests_dir . ' && phpunit' );
 			else :
 				WP_CLI::error( 'Please run `wp core install-tests` first!' );
@@ -27,6 +28,7 @@ if ( true === class_exists( 'WP_CLI_Command' ) ){
 			WP_CLI::line( 'Doing Plugin ' . $slug );
 			$plugin_dir = WP_PLUGIN_DIR . '/' . $slug;
 			if ( is_dir( $plugin_dir ) ):
+				WP_CLI::line( 'cd ' . $unit_tests_dir . ' && phpunit' );
 				WP_CLI::launch( 'export WP_TESTS_DIR='.$tests.'; cd ' . $plugin_dir . '; phpunit -c phpunit.xml ' );
 			else :
 				WP_CLI::error( 'Can\'t find plugin folder: ' . $plugin_dir );
