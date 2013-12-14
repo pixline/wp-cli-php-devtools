@@ -15,8 +15,16 @@
   ],
   "repositories": [
     {
-      "type": "git",
-      "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/"
+        "type":"package",
+        "package": {
+          "name": "wordpress-coding-standards/wordpress-coding-standards",
+          "version":"master",
+          "source": {
+              "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
+              "type": "git",
+              "reference":"master"
+            }
+        }
     }
   ],
   "require": {
@@ -25,7 +33,7 @@
     "phpunit/phpunit": "3.7.*",
     "phpunit/php-invoker": ">=1.1.0",
     "squizlabs/PHP_CodeSniffer": ">=1.5.1",
-    "WordPress-Coding-Standards/WordPress-Coding-Standards": "master",
+    "wordpress-coding-standards/wordpress-coding-standards": "master",
     "phploc/phploc": "2.0.*",
     "sebastian/phpcpd": "2.0.*",
     "phpunit/phpcov": "2.0.*@dev",
