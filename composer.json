@@ -33,7 +33,7 @@
     "phpunit/phpunit": "4.0.*",
     "phpunit/php-invoker": ">=1.1.0",
     "squizlabs/PHP_CodeSniffer": ">=1.5.1",
-    "wordpress-coding-standards/wordpress-coding-standards": "2013-10-06",
+    "wordpress-coding-standards/wordpress-coding-standards": ">=2013-10-06",
     "phploc/phploc": "2.0.*",
     "sebastian/phpcpd": "2.0.*",
     "phpunit/phpcov": "2.0.*",
