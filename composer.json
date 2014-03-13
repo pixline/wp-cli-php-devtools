@@ -15,20 +15,28 @@
   ],
   "repositories": [
     {
-        "type":"git",
-		"url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git"
+        "type":"package",
+        "package": {
+          "name": "wordpress-coding-standards/wordpress-coding-standards",
+          "version":"2013-10-06",
+          "source": {
+              "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
+              "type": "git",
+              "reference":"2013-10-06"
+            }
+        }
     }
   ],
   "require": {
     "php": ">=5.4",
     "wp-cli/wp-cli": ">=0.12",
-    "phpunit/phpunit": "3.7.*",
+    "phpunit/phpunit": "~4.0",
     "phpunit/php-invoker": ">=1.1.0",
     "squizlabs/PHP_CodeSniffer": ">=1.5.1",
-    "WordPress-Coding-Standards/WordPress-Coding-Standards": ">=2013-10-06",
+    "wordpress-coding-standards/wordpress-coding-standards": ">=2013-10-06",
     "phploc/phploc": "2.0.*",
     "sebastian/phpcpd": "2.0.*",
-    "phpunit/phpcov": "2.0.*@dev",
+    "phpunit/phpcov": "2.0.*",
     "sebastian/phpdcd": "1.0.*@dev",
     "phpmd/phpmd": "1.5.*"
   },
