@@ -30,7 +30,7 @@
   "require": {
     "php": ">=5.4",
     "wp-cli/wp-cli": ">=0.12",
-    "phpunit/phpunit": "~4.0",
+    "phpunit/phpunit": "4.0.*",
     "phpunit/php-invoker": ">=1.1.0",
     "squizlabs/PHP_CodeSniffer": ">=1.5.1",
     "wordpress-coding-standards/wordpress-coding-standards": "2013-10-06",
