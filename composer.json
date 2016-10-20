@@ -1,6 +1,6 @@
 {
   "name": "pixline/wp-cli-php-devtools",
-  "type": "command",
+  "type": "wp-cli-package",
   "description": "Wrapper around common development utilities",
   "keywords": ["wp-cli","phpcpd","phpcs","phpdcd","phploc","phpmd","phpunit","phpreport","development"],
   "homepage": "https://github.com/pixline/wp-cli-php-devtools",
